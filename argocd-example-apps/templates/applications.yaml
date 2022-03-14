@@ -28,15 +28,15 @@ spec:
     path: {{ $val.source.path $ }}
     repoURL: {{ $val.source.repoURL | default $.Values.default.app.source.repoURL }}
     targetRevision: {{ $val.source.targetRevision | default $.Values.default.app.source.targetRevision }}
-{{- if $val.source.extraSourceFields }}
-{{ tpl $val.source.extraSourceFields $ | indent 4 }}
-{{- else if $.Values.default.app.source.extraSourceFields }}
-{{ tpl $.Values.default.app.source.extraSourceFields $ | indent 4 }}
-{{- end }}
-{{- if $val.extraFields }}
-{{ tpl $val.extraFields $ | indent 2 }}
-{{- else if $.Values.default.app.extraFields }}
-{{ tpl $.Values.default.app.extraFields $ | indent 2 }}
-{{- end }}
+#{{- if $val.source.extraSourceFields }}
+#{{ tpl $val.source.extraSourceFields $ | indent 4 }}
+#{{- else if $.Values.default.app.source.extraSourceFields }}
+#{{ tpl $.Values.default.app.source.extraSourceFields $ | indent 4 }}
+#{{- end }}
+#{{- if $val.extraFields }}
+#{{ tpl $val.extraFields $ | indent 2 }}
+#{{- else if $.Values.default.app.extraFields }}
+#{{ tpl $.Values.default.app.extraFields $ | indent 2 }}
+#{{- end }}
 {{- end }}
 {{- end }}
