@@ -25,7 +25,7 @@ spec:
       prune: {{ $val.autoSyncPrune | default $.Values.default.app.autoSyncPrune | default true }}
 {{- end }}
   source:
-    path: {{ tpl $val.source.path $ }}
+    path: {{ $val.source.path $ }}
     repoURL: {{ $val.source.repoURL | default $.Values.default.app.source.repoURL | required (printf "No source.repoURL specified for %s" $key ) }}
     targetRevision: {{ $val.source.targetRevision | default $.Values.default.app.source.targetRevision | required (printf "No source.targetRevision specified for %s" $key ) }}
 {{- if $val.source.extraSourceFields }}
