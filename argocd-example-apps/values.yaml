@@ -18,10 +18,10 @@ default:
       repoURL: null
       targetRevision: HEAD
 
-      extraSourceFields: |
-        helm:
-          valueFiles:
-          - {{ $.Values.envName }}-values.yaml
+      #extraSourceFields: |
+        #helm:
+          #valueFiles:
+          #- {{ $.Values.envName }}-values.yaml
       #  kustomize:
       #    namePrefix: prod-
     #extraFields: |
