@@ -31,7 +31,7 @@ default:
 applications:
 
   helm-guestbook:
-    enabled: false
+    enabled: true
     destination:
       namespace: my-apps
       server: 'https://kubernetes.default.svc'
