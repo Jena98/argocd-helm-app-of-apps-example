@@ -19,11 +19,11 @@ spec:
 #{{- else }}
   #project: {{ $.Values.envName }}-{{ $val.project | default $.Values.default.app.project }}
 #{{- end }}
-{{- if $val.enableAutoSync | default $.Values.default.app.enableAutoSync }}
+  {{- if $val.enableAutoSync | default $.Values.default.app.enableAutoSync }}
   syncPolicy:
     automated:
       prune: {{ $val.autoSyncPrune | default $.Values.default.app.autoSyncPrune | default true }}
-{{- end }}
+  {{- end }}
   source:
     path: {{ $val.source.path $ }}
     repoURL: {{ $val.source.repoURL | default $.Values.default.app.source.repoURL }}
