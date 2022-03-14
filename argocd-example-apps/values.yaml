@@ -2,21 +2,21 @@
 envName: jenana
 
 # if set, override all Applications to use this project
-projectOverride: null
+#projectOverride: null
 
 
-default:
-  app:
-    enableAutoSync: null
-    autoSyncPrune: true
-    destination:
-      namespace: null
-      server: null
-    project: null
-    source:
-      path: null
-      repoURL: null
-      targetRevision: HEAD
+#default:
+  #app:
+    #enableAutoSync: null
+    #autoSyncPrune: true
+    #destination:
+      #namespace: null
+      #server: null
+    #project: null
+    #source:
+      #path: null
+      #repoURL: null
+      #targetRevision: HEAD
 
       #extraSourceFields: |
         #helm:
@@ -36,6 +36,7 @@ applications:
       namespace: my-apps
       server: 'https://kubernetes.default.svc'
     source:
+      targetRevision: HEAD
       path: helm-guestbook
       repoURL: "https://github.com/jenana-devops/argocd-helm-app-of-apps.git"
 
