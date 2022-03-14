@@ -34,10 +34,10 @@ applications:
     enabled: true
     destination:
       namespace: my-apps
-      server: 'https://kubernetes.default.svc'
+      server: "https://kubernetes.default.svc"
     source:
       targetRevision: HEAD
       path: helm-guestbook
-      repoURL: "https://github.com/jenana-devops/argocd-helm-app-of-apps.git"
+      repoURL: "https://github.com/Jena98/argocd-helm-app-of-apps-example.git"
 
 
